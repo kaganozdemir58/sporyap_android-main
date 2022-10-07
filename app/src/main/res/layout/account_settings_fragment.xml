@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/app_main_color"
+    tools:context=".view.profile.AccountSettingsFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/corporate_name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/text_view_corporate_name_label"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="0.5dp"
+                android:layout_weight="0.5"
+                android:background="@color/bg_profile_layout_color"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:text="@string/corporate_name"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/text_view_corporate_name"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="0.5dp"
+                android:layout_weight="0.5"
+                android:background="@color/bg_profile_layout_color"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+
+            <TextView
+                android:id="@+id/text_view_name_label"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="0.5dp"
+                android:layout_weight="0.5"
+                android:background="@color/bg_profile_layout_color"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:text="@string/your_name"
+                android:textColor="@android:color/white" />
+
+
+            <TextView
+                android:id="@+id/text_view_name"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="0.5dp"
+                android:layout_weight="0.5"
+                android:background="@color/bg_profile_layout_color"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sur_name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+
+            <TextView
+                android:id="@+id/text_view_sur_name_label"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="0.5dp"
+                android:layout_weight="0.5"
+                android:background="@color/bg_profile_layout_color"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:text="@string/your_sur_name"
+                android:textColor="@android:color/white" />
+
+
+            <TextView
+                android:id="@+id/text_view_sur_name"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="0.5dp"
+                android:layout_weight="0.5"
+                android:background="@color/bg_profile_layout_color"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/gender_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+
+            <TextView
+                android:id="@+id/text_view_gender_label"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="0.5dp"
+                android:layout_weight="0.5"
+                android:background="@color/bg_profile_layout_color"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:text="@string/your_gender"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/text_view_gender"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="0.5dp"
+                android:layout_weight="0.5"
+                android:background="@color/bg_profile_layout_color"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/birth_date_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+
+            <TextView
+                android:id="@+id/text_view_birth_date_label"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="0.5dp"
+                android:layout_weight="0.5"
+                android:background="@color/bg_profile_layout_color"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:text="@string/your_birth_day"
+                android:textColor="@android:color/white" />
+
+
+            <TextView
+                android:id="@+id/text_view_birth_date"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="0.5dp"
+                android:layout_weight="0.5"
+                android:background="@color/bg_profile_layout_color"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mail_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+
+            <TextView
+                android:id="@+id/text_view_mail_label"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="0.5dp"
+                android:layout_weight="0.5"
+                android:background="@color/bg_profile_layout_color"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:text="@string/your_email"
+                android:textColor="@android:color/white" />
+
+
+            <TextView
+                android:id="@+id/text_view_mail"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="0.5dp"
+                android:layout_weight="0.5"
+                android:background="@color/bg_profile_layout_color"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/phone_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+
+            <TextView
+                android:id="@+id/text_view_phone_label"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="0.5dp"
+                android:layout_weight="0.5"
+                android:background="@color/bg_profile_layout_color"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:text="@string/your_phone"
+                android:textColor="@android:color/white" />
+
+
+            <TextView
+                android:id="@+id/text_view_phone"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="0.5dp"
+                android:layout_weight="0.5"
+                android:background="@color/bg_profile_layout_color"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/country_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+
+            <TextView
+                android:id="@+id/text_view_country_label"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="0.5dp"
+                android:layout_weight="0.5"
+                android:background="@color/bg_profile_layout_color"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:text="@string/your_country"
+                android:textColor="@android:color/white" />
+
+
+            <TextView
+                android:id="@+id/text_view_country"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="0.5dp"
+                android:layout_weight="0.5"
+                android:background="@color/bg_profile_layout_color"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/city_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+
+            <TextView
+                android:id="@+id/text_view_city_label"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="0.5dp"
+                android:layout_weight="0.5"
+                android:background="@color/bg_profile_layout_color"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:text="@string/your_city"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/text_view_city"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="0.5dp"
+                android:layout_weight="0.5"
+                android:background="@color/bg_profile_layout_color"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/district_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+
+            <TextView
+                android:id="@+id/text_view_district_label"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="0.5dp"
+                android:layout_weight="0.5"
+                android:background="@color/bg_profile_layout_color"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:text="@string/your_district"
+                android:textColor="@android:color/white" />
+
+
+            <TextView
+                android:id="@+id/text_view_district"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="0.5dp"
+                android:layout_weight="0.5"
+                android:background="@color/bg_profile_layout_color"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/location_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+
+            <TextView
+                android:id="@+id/text_view_location_label"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="0.5dp"
+                android:layout_weight="0.5"
+                android:background="@color/bg_profile_layout_color"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:text="@string/location_hint"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/text_view_location"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="0.5dp"
+                android:layout_weight="0.5"
+                android:background="@color/bg_profile_layout_color"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/user_corporate_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/text_view_user_corporate_label"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="0.5dp"
+                android:layout_weight="0.5"
+                android:background="@color/bg_profile_layout_color"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:text="@string/corporate"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/text_view_user_corporate"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="0.5dp"
+                android:layout_weight="0.5"
+                android:background="@color/bg_profile_layout_color"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/user_corporate_location_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/text_view_user_corporate_location_label"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="0.5dp"
+                android:layout_weight="0.5"
+                android:background="@color/bg_profile_layout_color"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:text="@string/corporate_location_hint"
+                android:textColor="@android:color/white" />
+
+
+            <TextView
+                android:id="@+id/text_view_user_corporate_location"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="0.5dp"
+                android:layout_weight="0.5"
+                android:background="@color/bg_profile_layout_color"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_view_corporate_sport_profile"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/montserrat_regular"
+            android:background="@color/bg_profile_layout_color"
+            android:text="@string/corporate_sport_profile"
+            android:gravity="center"
+            android:layout_gravity="center" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_corporate_sports"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            app:spanCount="3"
+            tools:listitem="@layout/item_sport"
+            android:paddingBottom="48dp"/>
+
+        <TextView
+            android:id="@+id/text_view_sport_profile"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/montserrat_regular"
+            android:background="@color/bg_profile_layout_color"
+            android:text="@string/sport_profile"
+            android:gravity="center"
+            android:layout_gravity="center" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_user_sports"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            app:spanCount="3"
+            tools:listitem="@layout/item_sport"
+            android:paddingBottom="48dp"/>
+
+
+        <TextView
+            android:id="@+id/text_view_trainer_profile"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/montserrat_regular"
+            android:background="@color/bg_profile_layout_color"
+            android:text="@string/trainer_profile_hint"
+            android:gravity="center"
+            android:layout_gravity="center" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_trainer_sports"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            app:spanCount="3"
+            tools:listitem="@layout/item_sport"
+            android:paddingBottom="48dp"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="un_selected_component_bg_color">#FFFFFFFF</color>
+    <color name="app_main_color">#041D7A</color>
+    <color name="selected_component_bg_color">#0DB70D</color>
+    <color name="facebook_color">#80494EDC</color>
+    <color name="bg_login_color">#F11E49</color>
+    <color name="bg_google_color">#DB4437</color>
+    <color name="bg_border_color">#72704A</color>
+    <color name="title_color">#F5F1B5</color>
+    <color name="edittext_bg">#E4E4E4</color>
+    <color name="edittext_border">#707070</color>
+    <color name="bg_in_active_button">#827F92</color>
+    <color name="border_in_active_button">#707070</color>
+    <color name="sport_category_bg_color">#3F22D1</color>
+    <color name="light_yellow">#C2F162</color>
+    <color name="bg_profile_layout_color">#273542</color>
+    <color name="profile_header_title_color">#F5F1B5</color>
+    <color name="text_view_bg_color">#52273542</color>
+    <color name="gray">#BDBFC3</color>
+    <color name="light_gray">#F6F7F6</color>
+    <color name="light_red">#EF3240</color>
+    <color name="bg_search_color">#767680</color>
+    <color name="dark_gray">#939393</color>
+    <color name="hint_text_color">#A8ACB2</color>
+    <color name="bg_button_password_color">#80827F92</color>
+    <color name="facebook_button_color">#142A73</color>
+    <color name="google_button_color">#242624</color>
+</resources>

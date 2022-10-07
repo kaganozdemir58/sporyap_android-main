@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/app_main_color"
+    tools:context=".view.event.CreateEventFragment">
+
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_view_sport"
+            style="@style/CreateEventTextViewStyle"
+            android:text="@string/sport" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_sports"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:listitem="@layout/item_sport"
+            app:spanCount="3" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_view_event_type"
+            style="@style/CreateEventTextViewStyle"
+            android:text="@string/event_type"
+            app:drawableStartCompat="@drawable/ic_event_type" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_event_types"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:listitem="@layout/item_event_type"
+            app:spanCount="3"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_view_event_category"
+            style="@style/CreateEventTextViewStyle"
+            android:text="@string/event_category"
+            app:drawableStartCompat="@drawable/ic_event_type" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_event_categories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:listitem="@layout/item_create_event"
+            android:layout_marginTop="8dp"
+            app:spanCount="3"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_view_event_owner_type"
+            style="@style/CreateEventTextViewStyle"
+            android:text="@string/event_owner_type"
+            app:drawableStartCompat="@drawable/ic_event_owner_type" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_view_event_owner_type_desc"
+            style="@style/CreateEventTextViewStyle"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:fontFamily="@font/montserrat_light"
+            android:text="@string/event_owner_type_desc" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_event_owner_types"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:listitem="@layout/item_create_event"
+            app:spanCount="3"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_view_participant_type"
+            style="@style/CreateEventTextViewStyle"
+            android:text="@string/participant_type"
+            app:drawableStartCompat="@drawable/ic_participant_type" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_view_participant_type_desc"
+            style="@style/CreateEventTextViewStyle"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:fontFamily="@font/montserrat_light"
+            android:text="@string/participant_type_desc" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_participant_types"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:listitem="@layout/item_create_event"
+            app:spanCount="3"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_view_gender_participant_type"
+            style="@style/CreateEventTextViewStyle"
+            android:text="@string/participant_type"
+            app:drawableStartCompat="@drawable/ic_participant_type" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_view_gender_participant_type_desc"
+            style="@style/CreateEventTextViewStyle"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:fontFamily="@font/montserrat_light"
+            android:text="@string/participant_type_desc" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_genders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:listitem="@layout/item_create_event"
+            app:spanCount="3"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_view_player_count"
+            style="@style/CreateEventTextViewStyle"
+            android:text="@string/player_count"
+            app:drawableStartCompat="@drawable/ic_player_count" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_player_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:listitem="@layout/item_create_event"
+            app:spanCount="3"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_view_location"
+            style="@style/CreateEventTextViewStyle"
+            android:text="@string/district"
+            app:drawableStartCompat="@drawable/ic_district_location" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_locations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:listitem="@layout/item_create_event"
+            app:spanCount="3"/>
+
+        <RelativeLayout
+            android:id="@+id/facility_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_facility"
+                style="@style/CreateEventTextViewStyle"
+                android:text="@string/facility"
+                app:drawableStartCompat="@drawable/ic_facility"
+                android:layout_centerInParent="true"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_facility_create"
+                style="@style/CreateEventTextViewStyle"
+                android:fontFamily="@font/montserrat_light"
+                android:textSize="12sp"
+                android:text="@string/add"
+                app:drawableStartCompat="@drawable/ic_add"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"/>
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_facilities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:listitem="@layout/item_create_event"
+            android:layout_marginTop="8dp"
+            app:spanCount="3"/>
+
+        <RelativeLayout
+            android:id="@+id/event_date_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_event_date"
+                style="@style/CreateEventTextViewStyle"
+                android:text="@string/date"
+                app:drawableStartCompat="@drawable/ic_event_date"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_reserve"
+                style="@style/CreateEventTextViewStyle"
+                android:textSize="12sp"
+                android:fontFamily="@font/montserrat_light"
+                android:text="@string/reserve"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_today"
+                android:layout_width="0dp"
+                android:layout_weight="0.4"
+                style="@style/TextViewStyle"
+                android:text="@string/today"
+                android:layout_marginEnd="4dp"/>
+
+            <EditText
+                android:id="@+id/edit_text_date"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="0.6"
+                style="@style/TextViewStyle"
+                android:focusable="false"
+                android:layout_marginStart="4dp"
+                android:inputType="date"
+                android:textColorHint="@color/app_main_color"
+                android:autofillHints="creditCardExpirationDate"
+                android:hint="@string/calendar"/>
+
+
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_view_event_start_time"
+            style="@style/CreateEventTextViewStyle"
+            android:text="@string/start_time"
+            app:drawableStartCompat="@drawable/ic_event_time" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_start_time"
+                android:layout_width="0dp"
+                android:layout_weight="0.4"
+                style="@style/TextViewStyle"
+                android:layout_marginEnd="4dp"/>
+
+            <EditText
+                android:id="@+id/edit_text_start_time"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="0.6"
+                android:focusable="false"
+                style="@style/TextViewStyle"
+                android:layout_marginStart="4dp"
+                android:inputType="time"
+                android:textColorHint="@color/app_main_color"
+                android:autofillHints="creditCardExpirationDate"
+                android:hint="@string/clock"/>
+
+
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_view_event_end_time"
+            style="@style/CreateEventTextViewStyle"
+            android:text="@string/end_time"
+            app:drawableStartCompat="@drawable/ic_event_time" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_view_end_time"
+                android:layout_width="0dp"
+                android:layout_weight="0.4"
+                style="@style/TextViewStyle"
+                android:layout_marginEnd="4dp"/>
+
+            <EditText
+                android:id="@+id/edit_text_end_time"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="0.6"
+                android:focusable="false"
+                style="@style/TextViewStyle"
+                android:layout_marginStart="4dp"
+                android:inputType="time"
+                android:textColorHint="@color/app_main_color"
+                android:autofillHints="creditCardExpirationDate"
+                android:hint="@string/clock"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

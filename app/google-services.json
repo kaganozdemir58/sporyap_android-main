@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "712117735708",
+    "project_id": "sporyap-android",
+    "storage_bucket": "sporyap-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:712117735708:android:b2f9a7ab076971a5472ad9",
+        "android_client_info": {
+          "package_name": "com.sporyap.sporyap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "712117735708-uahnbsn3puo5a8eng05cee1r602l73b5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyT8hi1kT41D7g9pOySx8wPvIfzC7I5GU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "712117735708-uahnbsn3puo5a8eng05cee1r602l73b5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

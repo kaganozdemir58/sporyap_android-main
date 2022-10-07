@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_events"
+        android:icon="@drawable/ic_spor_yap_logo"
+        app:showAsAction="ifRoom"
+        android:title="@string/home"/>
+
+    <item
+        android:id="@+id/navigation_message"
+        android:icon="@drawable/ic_arrow"
+        app:showAsAction="ifRoom"
+        android:title="@string/message"/>
+
+    <item
+        android:id="@+id/navigation_event_add"
+        android:icon="@drawable/ic_add"
+        app:showAsAction="ifRoom"
+        android:title="@string/add"/>
+
+    <item
+        android:id="@+id/navigation_favorite"
+        android:icon="@drawable/ic_favorite"
+        app:showAsAction="ifRoom"
+        android:title="@string/favorite"/>
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_profile"
+        app:showAsAction="ifRoom"
+        android:title="@string/profile"/>
+
+</menu>

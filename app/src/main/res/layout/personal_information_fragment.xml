@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/app_main_color"
+    tools:context=".view.signup.PersonalInformationFragment">
+
+    <include
+        android:id="@+id/header_layout"
+        layout="@layout/fragment_header_layout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/container_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_layout"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+    <TextView
+        android:id="@+id/text_view_page_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_medium"
+        android:textColor="@android:color/white"
+        android:text="@string/please_enter_your_personal_information"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textSize="22sp"/>
+
+    <EditText
+        android:id="@+id/edit_text_name"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        style="@style/EditTextStyle"
+        android:layout_marginTop="16dp"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        android:autofillHints="name"/>
+
+    <EditText
+        android:id="@+id/edit_text_last_name"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        style="@style/EditTextStyle"
+        android:layout_marginTop="8dp"
+        android:hint="@string/last_name"
+        android:inputType="textPersonName"
+        android:autofillHints="name"/>
+
+    <RadioGroup android:id="@+id/radio_group_gender"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:id="@+id/radio_button_female"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="0.5"
+            android:text="@string/female"
+            android:layout_marginStart="2dp"/>
+
+        <RadioButton
+            android:id="@+id/radio_button_male"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="0.5"
+            android:text="@string/male"
+            android:layout_marginEnd="2dp"/>
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/edit_text_email"
+        style="@style/EditTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:autofillHints="emailAddress"
+        android:hint="@string/mail"
+        android:inputType="textEmailAddress" />
+
+    <LinearLayout
+        android:id="@+id/phone_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:weightSum="1">
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/spinner_phone_codes"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/bg_edittext"/>
+
+
+        <EditText
+            android:id="@+id/edit_text_phone"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:layout_marginStart="4dp"
+            style="@style/EditTextStyle"
+            android:hint="@string/phone"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:digits="0123456789+"
+            android:autofillHints="phone"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_edittext">
+
+        <EditText
+            android:id="@+id/edit_text_password"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:autofillHints="password"
+            android:layout_weight="0.8"
+            style="@style/EditTextStyle"/>
+
+        <ImageView
+            android:id="@+id/image_view_ic_eye_close_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_eye_close"
+            android:layout_weight="0.2"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/app_name"/>
+
+        <ImageView
+            android:id="@+id/image_view_ic_eye_open_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_eye_open"
+            android:layout_weight="0.2"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone"
+            android:contentDescription="@string/app_name" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_edittext">
+
+        <EditText
+            android:id="@+id/edit_text_password_retry"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:hint="@string/password_retry"
+            android:inputType="textPassword"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:autofillHints="password"
+            android:layout_weight="0.8"
+            style="@style/EditTextStyle"/>
+
+        <ImageView
+            android:id="@+id/image_view_ic_eye_close_password_retry"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_eye_close"
+            android:layout_weight="0.2"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/app_name"/>
+
+        <ImageView
+            android:id="@+id/image_view_ic_eye_open_password_retry"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_eye_open"
+            android:layout_weight="0.2"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone"
+            android:contentDescription="@string/app_name"/>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_enter"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        style="@style/ButtonStyle"
+        android:text="@string/continue_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/app_main_color"
+    tools:context=".view.event.EventsFragment">
+
+  <RelativeLayout
+      android:id="@+id/header_layout"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/image_view_header_logo_height"
+      android:orientation="horizontal"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginTop="8dp">
+
+    <ImageButton
+        android:id="@+id/image_button_list"
+        android:layout_width="@dimen/image_view_header_width"
+        android:layout_height="@dimen/image_view_header_height"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_list"
+        tools:ignore="DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
+
+    <ImageView
+        android:id="@+id/image_view_header_logo"
+        android:layout_width="@dimen/image_view_header_logo_width"
+        android:layout_height="@dimen/image_view_header_logo_height"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_app_header_logo"
+        android:layout_marginTop="8dp"/>
+
+    <ImageButton
+        android:id="@+id/image_button_search"
+        android:layout_width="@dimen/image_view_header_width"
+        android:layout_height="@dimen/image_view_header_height"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:layout_toStartOf="@+id/image_button_filter"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_search"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
+    <ImageButton
+        android:id="@+id/image_button_filter"
+        android:layout_width="@dimen/image_view_header_width"
+        android:layout_height="@dimen/image_view_header_height"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_filter"
+        tools:ignore="TouchTargetSizeCheck" />
+
+  </RelativeLayout>
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/eventTextview"
+      android:text="@string/events"
+      android:textColor="@android:color/white"
+      android:textSize="22sp"
+      android:visibility="invisible"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/header_layout" />
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/rv"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_marginTop="8dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/header_layout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

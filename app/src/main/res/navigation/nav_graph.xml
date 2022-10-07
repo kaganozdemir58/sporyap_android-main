@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.sporyap.sporyap.view.on_boarding.OnBoardingFragment"
+        android:label="on_boarding_fragment"
+        tools:layout="@layout/on_boarding_fragment" />
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.sporyap.sporyap.view.welcome.WelcomeFragment"
+        android:label="welcome_fragment"
+        tools:layout="@layout/welcome_fragment" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_personalInformationFragment"
+            app:destination="@id/personalInformationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.sporyap.sporyap.view.login.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_eventsFragment"
+            app:destination="@id/navigation_events" />
+        <action
+            android:id="@+id/action_loginFragment_to_userVerificationFragment"
+            app:destination="@id/userVerificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userTypeFragment"
+        android:name="com.sporyap.sporyap.view.signup.UserTypeFragment"
+        android:label="user_type_fragment"
+        tools:layout="@layout/user_type_fragment" >
+        <action
+            android:id="@+id/action_userTypeFragment_to_corporateNameFragment"
+            app:destination="@id/corporateNameFragment" />
+        <action
+            android:id="@+id/action_userTypeFragment_to_selectYourSportsFragment"
+            app:destination="@id/selectYourSportsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/corporateNameFragment"
+        android:name="com.sporyap.sporyap.view.corporate.CorporateNameFragment"
+        android:label="corporate_name_fragment"
+        tools:layout="@layout/corporate_name_fragment" >
+        <action
+            android:id="@+id/action_corporateNameFragment_to_corporateTypeFragment"
+            app:destination="@id/corporateTypeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/corporateTypeFragment"
+        android:name="com.sporyap.sporyap.view.corporate.CorporateTypeFragment"
+        android:label="corporate_type_fragment"
+        tools:layout="@layout/corporate_type_fragment" >
+        <action
+            android:id="@+id/action_corporateTypeFragment_to_selectCorporateSportsFragment"
+            app:destination="@id/selectCorporateSportsFragment" />
+        <argument
+            android:name="corporateName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.sporyap.sporyap.view.web_view.WebViewFragment"
+        android:label="fragment_web_view"
+        tools:layout="@layout/fragment_web_view" />
+
+    <fragment
+        android:id="@+id/navigation_events"
+        android:name="com.sporyap.sporyap.view.event.EventsFragment"
+        android:label="@string/events"
+        tools:layout="@layout/events_fragment" />
+
+    <fragment
+        android:id="@+id/personalInformationFragment"
+        android:name="com.sporyap.sporyap.view.signup.PersonalInformationFragment"
+        android:label="personal_information_fragment"
+        tools:layout="@layout/personal_information_fragment" >
+        <argument
+            android:name="name"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="lastName"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="gender"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="email"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="phone"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_personalInformationFragment_to_userTypeFragment"
+            app:destination="@id/userTypeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectYourSportsFragment"
+        android:name="com.sporyap.sporyap.view.signup.SelectYourSportsFragment"
+        android:label="select_your_sports_fragment"
+        tools:layout="@layout/select_your_sports_fragment" >
+        <action
+            android:id="@+id/action_selectYourSportsFragment_to_selectTrainerSportsFragment"
+            app:destination="@id/selectTrainerSportsFragment" />
+        <argument
+            android:name="userType"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_selectYourSportsFragment_to_userVerificationFragment"
+            app:destination="@id/userVerificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectTrainerSportsFragment"
+        android:name="com.sporyap.sporyap.view.trainer.SelectTrainerSportsFragment"
+        android:label="select_trainer_sports_fragment"
+        tools:layout="@layout/select_trainer_sports_fragment" >
+        <action
+            android:id="@+id/action_selectTrainerSportsFragment_to_userVerificationFragment"
+            app:destination="@id/userVerificationFragment" />
+        <argument
+            android:name="sportIdList"
+            app:argType="integer[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/userVerificationFragment"
+        android:name="com.sporyap.sporyap.view.signup.UserVerificationFragment"
+        android:label="user_verification_fragment"
+        tools:layout="@layout/user_verification_fragment" >
+        <action
+            android:id="@+id/action_userVerificationFragment_to_completeVerificationFragment"
+            app:destination="@id/completeVerificationFragment" />
+        <argument
+            android:name="corporateSports"
+            app:argType="integer[]" app:nullable="true" android:defaultValue="@null"/>
+        <argument
+            android:name="trainerSports"
+            app:argType="integer[]"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="athleteSports"
+            app:argType="integer[]" app:nullable="true" android:defaultValue="@null"/>
+        <argument
+            android:name="userType"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument android:name="corporateName" app:argType="string" app:nullable="true"/>
+        <argument android:name="corporateType" app:argType="integer" android:defaultValue="0"/>
+        <argument
+            android:name="forWhat"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_userVerificationFragment_to_startPasswordChangeFragment"
+            app:destination="@id/startPasswordChangeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/completeVerificationFragment"
+        android:name="com.sporyap.sporyap.view.signup.CompleteVerificationFragment"
+        android:label="complete_verification_fragment"
+        tools:layout="@layout/complete_verification_fragment" >
+        <action
+            android:id="@+id/action_completeVerificationFragment_to_eventsFragment"
+            app:destination="@id/navigation_events" />
+        <argument
+            android:name="notificationTypeId"
+            app:argType="integer" />
+        <argument
+            android:name="userId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectCorporateSportsFragment"
+        android:name="com.sporyap.sporyap.view.corporate.SelectCorporateSportsFragment"
+        android:label="select_corporate_sports_fragment"
+        tools:layout="@layout/select_corporate_sports_fragment" >
+        <action
+            android:id="@+id/action_selectCorporateSportsFragment_to_userVerificationFragment"
+            app:destination="@id/userVerificationFragment" />
+        <argument
+            android:name="corporateType"
+            app:argType="integer" />
+        <argument
+            android:name="corporateName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.sporyap.sporyap.view.profile.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/profile_fragment" >
+        <action
+            android:id="@+id/action_navigation_profile_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.sporyap.sporyap.view.settings.SettingsFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/settings_fragment" >
+        <action
+            android:id="@+id/action_settingsFragment_to_accountSettingsFragment"
+            app:destination="@id/accountSettingsFragment" />
+    </fragment>
+    <fragment android:id="@+id/splashFragment" android:name="com.sporyap.sporyap.view.splash.SplashFragment"
+              android:label="fragment_splash" tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_eventsFragment"
+            app:destination="@id/navigation_events" />
+        <action
+            android:id="@+id/action_splashFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_event_add"
+        android:name="com.sporyap.sporyap.view.event.CreateEventFragment"
+        android:label="@string/create_event"
+        tools:layout="@layout/create_event_fragment" />
+    <fragment
+        android:id="@+id/startPasswordChangeFragment"
+        android:name="com.sporyap.sporyap.view.forgot_password.StartPasswordChangeFragment"
+        android:label="start_password_change_fragment"
+        tools:layout="@layout/start_password_change_fragment" >
+        <argument
+            android:name="type"
+            app:argType="integer"
+            android:defaultValue="1" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountSettingsFragment"
+        android:name="com.sporyap.sporyap.view.profile.AccountSettingsFragment"
+        android:label="@string/my_account"
+        tools:layout="@layout/account_settings_fragment" />
+</navigation>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp">
+
+        <TextView
+            android:id="@+id/text_view_app_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/title_color"
+            android:textSize="64sp"
+            android:text="@string/title_first"
+            android:fontFamily="@font/chalet_london_nineteen_eighty"/>
+
+        <TextView
+            android:id="@+id/text_view_app_title_last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/title_color"
+            android:textSize="64sp"
+            android:text="@string/title_last"
+            android:fontFamily="@font/chalet_london_nineteen_seventy"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_view_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/chalet_london_nineteen_seventy"
+        android:gravity="center"
+        android:text="@string/ready_for_action"
+        android:textColor="@color/title_color"
+        android:textSize="27sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
